@@ -1,0 +1,59 @@
+body {
+    background: white;
+    color: #323232;
+    font-weight: 300;
+    font-style: 16px;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    font-family: Helvetica neue, roboto;
+    vertical-align: middle;
+  }
+  
+  .container {
+    padding-top: 50px;
+  }
+  
+  #binary-num-text {
+    padding: 40% 0;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  
+  #decimal-num-text {
+    padding: 40% 0;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  
+  #bin {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    border: solid 1px aquamarine;
+    font-size: .75em;
+    position:relative;
+  }
+  
+  #dec {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    border: solid 2px beige;
+    font-size: .75em;
+  }
+  
+  .inline-div {
+    display: inline-block;
+  }
+  
+  img {
+    width: 56px;
+    height: 48px;
+  }
+  
+  h1 {
+    font-weight: 200;
+    font-style: 26px;
+    margin: 10px;
+  }

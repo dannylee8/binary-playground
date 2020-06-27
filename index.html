@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inline-div" id="dec">
+        Decimal
+        <div id="decimal-num-text">0</div>
+      </div>
+
+      <div class="inline-div" id="bin">
+        Binary
+        <div id="binary-num-text">0</div>
+      </div>
+    </div>
+
+    <hr />
+    <div>
+      <button onClick="upClick()">up</button>
+      <button onClick="downClick()">down</button>
+    </div>
+    <h4>Increment amount</h4>
+    <div>
+      <button id="plus1" onClick="incrementClick(1)">+1</button>
+      <button id="plus10" onClick="incrementClick(10)">+10</button>
+      <button id="plus100" onClick="incrementClick(100)">+100</button>
+    </div>
+  </body>
+</html>
