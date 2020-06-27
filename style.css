@@ -1,50 +1,68 @@
+* {
+  border: 1px solid darkcyan;
+}
+
 body {
-    background: white;
+    background: lightgray;
     color: #323232;
     font-weight: 300;
     font-style: 16px;
-    height: 100vh;
+    height: 80vh;
     margin: 0;
     text-align: center;
     font-family: Helvetica neue, roboto;
-    vertical-align: middle;
   }
   
   .container {
-    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 32px 8px;
+    margin: 16px;
+  }
+
+  .left-block {
+    width: 16vw;
+    padding: 16px 16px;
+    margin-right: 16px;
+    border: 3px darkgrey solid;
+    border-radius: 10px;
+    background-color: lightgoldenrodyellow;
+  }
+
+  .right-block {
+    width: 64vw;
+    padding: 16px 16px;
   }
   
-  #binary-num-text {
-    padding: 40% 0;
+  .num-text {
+    padding: 0 0;
     font-weight: 500;
     font-size: 18px;
   }
   
-  #decimal-num-text {
-    padding: 40% 0;
-    font-weight: 500;
-    font-size: 18px;
-  }
-  
-  #bin {
-    height: 100px;
-    width: 100px;
+  .num-div {
+    height: 50px;
     margin: 0 auto;
-    border: solid 1px aquamarine;
     font-size: .75em;
-    position:relative;
+    padding: 8px 8px;
+    margin: 8px 8px;
+    border-radius: 10px;
+  }
+
+  #bin {
+    border: solid 1px aquamarine;
+    background-color: aquamarine;
   }
   
   #dec {
-    height: 100px;
-    width: 100px;
-    margin: 0 auto;
     border: solid 2px beige;
-    font-size: .75em;
+    background-color: beige;
   }
-  
-  .inline-div {
-    display: inline-block;
+
+  #twos {
+    border: solid 2px orange;
+    background-color:orange;  
   }
   
   img {
@@ -56,4 +74,10 @@ body {
     font-weight: 200;
     font-style: 26px;
     margin: 10px;
+  }
+
+  button {
+    display: block;
+    margin: 10px 0px;
+    padding: 3px 20px;
   }
