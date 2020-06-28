@@ -31,6 +31,7 @@ function b32twos(n) {
 function upClick() {
   number += increment;
   decimalEle.innerHTML = number;
+  // decimalEle.classList.remove("fade");
   binaryEle.innerHTML = b32(number);
   onesEle.innerHTML = b32ones(number);
   twosEle.innerHTML = b32twos(number);
@@ -39,6 +40,7 @@ function upClick() {
 function downClick() {
   number -= increment;
   decimalEle.innerHTML = number;
+  // decimalEle.classList.remove("fade");
   binaryEle.innerHTML = b32(number);
   onesEle.innerHTML = b32ones(number);
   twosEle.innerHTML = b32twos(number);

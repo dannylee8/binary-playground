@@ -50,14 +50,16 @@ body {
     border-radius: 10px;
   }
 
-  #bin {
-    border: solid 1px aquamarine;
-    background-color: aquamarine;
-  }
-  
   #dec {
     border: solid 2px beige;
     background-color: beige;
+    font-size: 2.5em;
+    color: lightseagreen;
+  }
+
+  #bin {
+    border: solid 1px aquamarine;
+    background-color: aquamarine;
   }
 
   #ones {
@@ -82,9 +84,16 @@ body {
   }
 
   button {
-    display: block;
-    margin: 10px 0px;
-    padding: 3px 20px;
+    display: block-inline;
+    margin: 5px 0px;
+    padding: 5px 15px;
+    border-radius: 8px;
+    transition-duration: 0.3s;
+  }
+
+  button:hover {
+    background-color: darkslategray; /* Green */
+    color: white;
   }
 
   .label {
