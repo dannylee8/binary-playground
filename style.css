@@ -60,6 +60,11 @@ body {
     background-color: beige;
   }
 
+  #ones {
+    border: solid 2px navajowhite;
+    background-color:navajowhite;  
+  }
+  
   #twos {
     border: solid 2px orange;
     background-color:orange;  
@@ -80,4 +85,10 @@ body {
     display: block;
     margin: 10px 0px;
     padding: 3px 20px;
+  }
+
+  .label {
+    margin-bottom: 10px;
+    font-size: .9em;
+    font-weight: 500;
   }

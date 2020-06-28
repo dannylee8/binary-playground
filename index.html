@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <div class="container">
-    <div class="left-block">
-      <button onClick="upClick()">up</button>
-      <button onClick="downClick()">down</button>
-      <h4>Increment amount</h4>
-      <button id="plus1" onClick="incrementClick(1)">+1</button>
-      <button id="plus10" onClick="incrementClick(10)">+10</button>
-      <button id="plus100" onClick="incrementClick(100)">+100</button>
+  <body>
+    <div class="container">
+      <div class="left-block">
+        <button onClick="upClick()">up</button>
+        <button onClick="downClick()">down</button>
+        <h4>Increment amount</h4>
+        <button id="plus1" onClick="incrementClick(1)">+1</button>
+        <button id="plus10" onClick="incrementClick(10)">+10</button>
+        <button id="plus100" onClick="incrementClick(100)">+100</button>
+      </div>
+      <div class="right-block">
+        <div class="num-div">
+          <div class="label">
+            Decimal
+          </div>
+          <div id="dec" class="num-text">0</div>
+        </div>
+        <div class="num-div">
+          <div class="label">
+            Binary
+          </div>
+          <div id="bin" class="num-text">0</div>
+        </div>
+        <div class="num-div">
+          <div class="label">
+            One's Complement
+          </div>
+          <div id="ones" class="num-text">0</div>
+        </div>
+        <div class="num-div">
+          <div class="label">
+            Two's Complement
+          </div>
+          <div id="twos" class="num-text">0</div>
+        </div>
+      </div>
     </div>
-    <div class="right-block">
-      <div class="num-div">
-        Decimal
-        <div id="dec" class="num-text">0</div>
-      </div>
-      <div class="num-div">
-        Binary
-        <div id="bin" class="num-text">0</div>
-      </div>
-      <div class="num-div">
-        Two's Complement
-        <div id="twos" class="num-text">0</div>
-      </div>
 
-    </div>
-  </div>
-
-  <script src="./script.js"></script>
-</body>
-
+    <script src="./script.js"></script>
+  </body>
 </html>
