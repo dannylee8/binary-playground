@@ -99,9 +99,14 @@ body {
   button:focus {
     outline: none;
   }
-  }
 
   .label {
+    margin-bottom: 10px;
+    font-size: .9em;
+    font-weight: 500;
+  }
+
+  .bold-label {
     margin-bottom: 10px;
     font-size: .9em;
     font-weight: 500;

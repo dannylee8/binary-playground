@@ -3,9 +3,10 @@ let decimalEle = document.getElementById("dec");
 let binaryEle = document.getElementById("bin");
 let onesEle = document.getElementById("ones");
 let twosEle = document.getElementById("twos");
+let unitCount = document.getElementById("unitCount");
 
 let number = 0;
-let increment = 1;
+let unit = 1;
 
 /**
  * Return a string representing n as a 32-bit unsigned integer,
@@ -29,7 +30,7 @@ function b32twos(n) {
 }
 
 function upClick() {
-  number += increment;
+  number += unit;
   decimalEle.innerHTML = number;
   // decimalEle.classList.remove("fade");
   binaryEle.innerHTML = b32(number);
@@ -38,7 +39,7 @@ function upClick() {
 }
 
 function downClick() {
-  number -= increment;
+  number -= unit;
   decimalEle.innerHTML = number;
   // decimalEle.classList.remove("fade");
   binaryEle.innerHTML = b32(number);
@@ -46,6 +47,7 @@ function downClick() {
   twosEle.innerHTML = b32twos(number);
 }
 
-function incrementClick(num) {
-  increment = num;
+function unitClick(num) {
+  unitCount.innerHTML = `${num}`;
+  unit = num;
 }
