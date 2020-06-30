@@ -1,8 +1,6 @@
 ## binary-playground
 
-#### Learning about converting numbers from decimal to binary in vanilla js.
-
----
+Learning about converting numbers from decimal to binary in vanilla js.
 
 Most recent version will be live at [https://www.panix.com/~dreamer/binary-playground](https://www.panix.com/~dreamer/binary-playground)`
 
