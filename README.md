@@ -2,7 +2,7 @@
 
 Learning about converting numbers from decimal to binary in vanilla js.
 
-Most recent version will be live at [https://www.panix.com/~dreamer/binary-playground](https://www.panix.com/~dreamer/binary-playground)`
+Most recent version will be live at [https://www.panix.com/~dreamer/binary-playground](https://www.panix.com/~dreamer/binary-playground)
 
 6/30/20
 * Add more increment/decrement button options
