@@ -119,3 +119,29 @@ body {
     color: steelblue;
     font-weight: 500;
   }
+
+  .up-arrow {
+    content:'▲';
+    font-size:1.5em;
+    color:gray;
+    display:inline-block;
+    text-decoration:none;
+    cursor: pointer;
+    padding: 0 10px;
+  }
+  .up-arrow:hover{
+      color:darkslategray;
+  }
+
+  .down-arrow {
+    content:'▼';
+    font-size:1.5em;
+    color:gray;
+    display:inline-block;
+    text-decoration:none;
+    cursor: pointer;
+    padding: 0 10px;
+  }
+  .down-arrow:hover{
+      color:darkslategray;
+  }
