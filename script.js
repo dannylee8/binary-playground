@@ -47,7 +47,23 @@ function downClick() {
   twosEle.innerHTML = b32twos(number);
 }
 
-function unitClick(num) {
-  unitCount.innerHTML = `${num}`;
-  unit = num;
+function unitClick(arg) {
+  if (arg === "reset") {
+    unit = 1;
+  } else if (arg[0] === "+") {
+    if (arg.length === 1) {
+      unit += 1;
+    } else {
+      unit += Number.parseInt(arg.split("+")[1]);
+    }
+  } else if (arg[0] === "-") {
+    if (arg.length === 1) {
+      unit -= 1;
+    } else {
+      unit -= Number.parseInt(arg.split("-")[1]);
+    }
+  } else {
+    unit += arg;
+  }
+  unitCount.innerHTML = `${unit}`;
 }
