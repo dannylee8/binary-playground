@@ -10,6 +10,7 @@
   <body>
     <div class="container">
       <div class="left-block">
+        <h4>Decimal to Binary Conversion</h4>
         <p>
           <span class="bold-label">Current Integer</span>
         </p>
@@ -39,25 +40,31 @@
         <button onClick="unitClick('-100')">-100</button>
       </div>
       <div class="right-block">
+        Click numnber to copy.
         <div class="num-div">
           <div class="label">
             Binary
           </div>
-          <div id="bin" class="num-text">0</div>
+          <div id="bin" class="num-text" onClick="copyText(this)">0</div>
         </div>
         <div class="num-div">
           <div class="label">
             One's Complement
           </div>
-          <div id="ones" class="num-text">0</div>
+          <div id="ones" class="num-text" onClick="copyText(this)">0</div>
         </div>
         <div class="num-div">
           <div class="label">
             Two's Complement
           </div>
-          <div id="twos" class="num-text">0</div>
+          <div id="twos" class="num-text" onClick="copyText(this)">0</div>
         </div>
+        <div id="copyMessage">&nbsp;</div>
       </div>
+    </div>
+    <div class="container">
+      <div class="left-block"></div>
+      <div class="right-block"></div>
     </div>
     <div class="footer">
       [<a href="https://www.panix.com/~dreamer/">home</a>] [<a

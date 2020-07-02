@@ -67,3 +67,14 @@ function unitClick(arg) {
   }
   unitCount.innerHTML = `${unit}`;
 }
+
+function copyText(element) {
+  navigator.clipboard.writeText(element.innerHTML).then((text) => {
+    document.getElementById("copyMessage").innerHTML = "Copied!";
+    setTimeout(clearCopyTextMessage, 2000);
+  });
+}
+
+function clearCopyTextMessage() {
+  document.getElementById("copyMessage").innerHTML = "&nbsp;";
+}
