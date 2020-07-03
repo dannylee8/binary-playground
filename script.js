@@ -100,12 +100,15 @@ function updateNumber(ele) {
       break;
     case "ArrowUp":
       // Up pressed
-      console.log(event.key);
       ele.value = Number.parseInt(ele.value) + 1;
+      number = ele.value;
+      updateCalcs();
       break;
     case "ArrowDown":
       // Down pressed
-      console.log(event.key);
+      ele.value = Number.parseInt(ele.value) - 1;
+      number = ele.value;
+      updateCalcs();
       break;
     case "Enter":
       number = ele.value;
@@ -137,17 +140,13 @@ function setInputFilter(textbox, inputFilter) {
       } else {
         this.value = "";
         number = 0;
-        decimalEle.value = number;
+        decimalEle.value = "";
         updateCalcs();
       }
     });
   });
 }
 
-setInputFilter(document.getElementById("myTextBox"), function (value) {
-  return /^\d*$/.test(value); // Allow digits and '.' only, using a RegExp
-});
-
-window.addEventListener("load", function () {
-  console.log("All assets are loaded");
+setInputFilter(document.getElementById("dec"), function (value) {
+  return /^-?\d*$/.test(value); // Allow digits and '.' only, using a RegExp
 });
