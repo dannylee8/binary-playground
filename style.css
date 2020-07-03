@@ -51,6 +51,8 @@ body {
     background-color: beige;
     font-size: 2.5em;
     color: lightseagreen;
+    width: 150px;
+    text-align: center;
   }
 
   #bin {

@@ -31,16 +31,16 @@ function b32twos(n) {
 
 function upClick() {
   number += unit;
-  decimalEle.innerHTML = number;
-  // decimalEle.classList.remove("fade");
-  binaryEle.innerHTML = b32(number);
-  onesEle.innerHTML = b32ones(number);
-  twosEle.innerHTML = b32twos(number);
+  updateCalcs();
 }
 
 function downClick() {
   number -= unit;
-  decimalEle.innerHTML = number;
+  updateCalcs();
+}
+
+function updateCalcs() {
+  decimalEle.value = number;
   // decimalEle.classList.remove("fade");
   binaryEle.innerHTML = b32(number);
   onesEle.innerHTML = b32ones(number);
@@ -87,3 +87,67 @@ function toggleOutlines() {
   }
   outline ? (outline = false) : (outline = true);
 }
+
+function updateNumber(ele) {
+  switch (event.key) {
+    case "ArrowLeft":
+      // Left pressed
+      console.log(event.key);
+      break;
+    case "ArrowRight":
+      // Right pressed
+      console.log(event.key);
+      break;
+    case "ArrowUp":
+      // Up pressed
+      console.log(event.key);
+      ele.value = Number.parseInt(ele.value) + 1;
+      break;
+    case "ArrowDown":
+      // Down pressed
+      console.log(event.key);
+      break;
+    case "Enter":
+      number = ele.value;
+      updateCalcs();
+      break;
+  }
+}
+
+// https://stackoverflow.com/questions/469357/html-text-input-allow-only-numeric-input
+function setInputFilter(textbox, inputFilter) {
+  [
+    "input",
+    "keydown",
+    "keyup",
+    "mousedown",
+    "mouseup",
+    "select",
+    "contextmenu",
+    "drop",
+  ].forEach(function (event) {
+    textbox.addEventListener(event, function () {
+      if (inputFilter(this.value)) {
+        this.oldValue = this.value;
+        this.oldSelectionStart = this.selectionStart;
+        this.oldSelectionEnd = this.selectionEnd;
+      } else if (this.hasOwnProperty("oldValue")) {
+        this.value = this.oldValue;
+        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+      } else {
+        this.value = "";
+        number = 0;
+        decimalEle.value = number;
+        updateCalcs();
+      }
+    });
+  });
+}
+
+setInputFilter(document.getElementById("myTextBox"), function (value) {
+  return /^\d*$/.test(value); // Allow digits and '.' only, using a RegExp
+});
+
+window.addEventListener("load", function () {
+  console.log("All assets are loaded");
+});

@@ -15,7 +15,13 @@
           <span class="bold-label">Current Integer</span>
         </p>
         <div>
-          <div id="dec" class="num-text">0</div>
+          <input
+            type="text"
+            class="num-text"
+            value="0"
+            id="dec"
+            onkeydown="updateNumber(this)"
+          />
         </div>
         <div class="up-arrow" onClick="upClick()">▲</div>
         <div class="down-arrow" onClick="downClick()">▼</div>
