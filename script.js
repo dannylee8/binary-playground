@@ -7,6 +7,7 @@ let unitCount = document.getElementById("unitCount");
 
 let number = 0;
 let unit = 1;
+let outline = false;
 
 /**
  * Return a string representing n as a 32-bit unsigned integer,
@@ -77,4 +78,20 @@ function copyText(element) {
 
 function clearCopyTextMessage() {
   document.getElementById("copyMessage").innerHTML = "&nbsp;";
+}
+
+function toggleOutlines() {
+  let elementArr = document.getElementsByTagName("*");
+
+  if (outline == false) {
+    for (let tag of elementArr) {
+      tag.style.border = "1px solid darkcyan";
+    }
+    outline = true;
+  } else {
+    for (let tag of elementArr) {
+      tag.style.border = "none";
+    }
+    outline = false;
+  }
 }
