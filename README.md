@@ -4,6 +4,11 @@ Learning about converting numbers from decimal to binary in vanilla js.
 
 Most recent version will be live at [https://www.panix.com/~dreamer/binary-playground](https://www.panix.com/~dreamer/binary-playground)
 
+7/3/20 
+* Add up and down keyboard arrows to inc/dec by 1
+* Change decimal field to an input that allows typing a number and hitting enter
+* Fix bug on load, where One's complement was 0 instead of 0b11111111.
+
 7/2/20
 * Add toggle-ability to CSS outlines 
 
