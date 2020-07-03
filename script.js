@@ -90,14 +90,14 @@ function toggleOutlines() {
 
 function updateNumber(ele) {
   switch (event.key) {
-    case "ArrowLeft":
-      // Left pressed
-      console.log(event.key);
-      break;
-    case "ArrowRight":
-      // Right pressed
-      console.log(event.key);
-      break;
+    // case "ArrowLeft":
+    //   // Left pressed
+    //   console.log(event.key);
+    //   break;
+    // case "ArrowRight":
+    //   // Right pressed
+    //   console.log(event.key);
+    //   break;
     case "ArrowUp":
       // Up pressed
       ele.value = Number.parseInt(ele.value) + 1;
