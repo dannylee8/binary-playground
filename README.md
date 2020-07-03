@@ -4,6 +4,12 @@ Learning about converting numbers from decimal to binary in vanilla js.
 
 Most recent version will be live at [https://www.panix.com/~dreamer/binary-playground](https://www.panix.com/~dreamer/binary-playground)
 
+7/2/20
+* Add toggle-ability to CSS outlines 
+
+7/1/20
+* Add click to copy number fields
+
 6/30/20
 * Add more increment/decrement button options
 * Add reset button for inc/dec
