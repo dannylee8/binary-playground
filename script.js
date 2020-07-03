@@ -4,6 +4,7 @@ let binaryEle = document.getElementById("bin");
 let onesEle = document.getElementById("ones");
 let twosEle = document.getElementById("twos");
 let unitCount = document.getElementById("unitCount");
+let allElements = document.getElementsByTagName("*");
 
 let number = 0;
 let unit = 1;
@@ -21,12 +22,10 @@ function b32(n) {
 }
 
 function b32ones(n) {
-  // >>> ensures highest bit isn’t interpreted as a sign
   return (~n >>> 0).toString(2).padStart(32, "0");
 }
 
 function b32twos(n) {
-  // >>> ensures highest bit isn’t interpreted as a sign
   return ((~n + 1) >>> 0).toString(2).padStart(32, "0");
 }
 
@@ -81,17 +80,10 @@ function clearCopyTextMessage() {
 }
 
 function toggleOutlines() {
-  let elementArr = document.getElementsByTagName("*");
-
-  if (outline == false) {
-    for (let tag of elementArr) {
-      tag.style.border = "1px solid darkcyan";
-    }
-    outline = true;
-  } else {
-    for (let tag of elementArr) {
-      tag.style.border = "none";
-    }
-    outline = false;
+  for (let tag of allElements) {
+    outline
+      ? (tag.style.border = "none")
+      : (tag.style.border = "1px solid darkcyan");
   }
+  outline ? (outline = false) : (outline = true);
 }
