@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator-style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="left-block">
+        <h4>Binary Calculator</h4>
+        <label for="value1">Value 1</label>
+        <input type="text" name="value1" id="value1" value="" />
+        <br />
+        <br />
+        <label for="value2">Value 2</label>
+        <input type="text" name="value2" id="value2" value="" />
+        <br />
+        <hr />
+        <button>+</button>
+      </div>
+      <div class="right-block"></div>
+    </div>
+    <div class="footer">
+      [<a href="https://www.panix.com/~dreamer/">home</a>] | [<a
+        href="https://github.com/dannylee8/binary-playground"
+        >github</a
+      >] | [<a href="./index.html">binary playground</a>] |
+      <span id="toggle-outline" onClick="toggleOutlines()">
+        outlines?
+      </span>
+    </div>
+    <script src="./calculator-script.js"></script>
+  </body>
+</html>

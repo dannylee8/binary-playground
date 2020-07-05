@@ -1,0 +1,154 @@
+/* * {
+  border: 1px solid darkcyan;
+} */
+
+body {
+    background: lightgray;
+    color: #323232;
+    font-weight: 300;
+    font-style: 16px;
+    height: 80vh;
+    margin: 0;
+    text-align: center;
+    font-family: Helvetica neue, roboto;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 32px 8px;
+    margin: 16px;
+  }
+
+  .left-block {
+    width: 20vw;
+    padding: 16px 16px;
+    margin-right: 16px;
+    border: 3px darkgrey solid;
+    border-radius: 10px;
+    background-color: lightgoldenrodyellow;
+  }
+
+  .right-block {
+    width: 40vw;
+    padding: 16px 16px;
+  }
+  
+
+  
+  .num-div {
+    height: 50px;
+    margin: 0 auto;
+    font-size: .75em;
+    padding: 8px 8px;
+    margin: 8px 8px;
+    border-radius: 10px;
+  }
+
+  #dec {
+    border: solid 2px beige;
+    background-color: beige;
+    font-size: 2.5em;
+    color: lightseagreen;
+    width: 150px;
+    text-align: center;
+  }
+
+  #bin {
+    border: solid 1px aquamarine;
+    background-color: aquamarine;
+  }
+
+  #ones {
+    border: solid 2px navajowhite;
+    background-color:navajowhite;  
+  }
+  
+  #twos {
+    border: solid 2px orange;
+    background-color:orange;  
+  }
+  
+  img {
+    width: 56px;
+    height: 48px;
+  }
+  
+  h1 {
+    font-weight: 200;
+    font-style: 26px;
+    margin: 10px;
+  }
+
+  button {
+    display: block-inline;
+    margin: 5px 0px;
+    padding: 5px 15px;
+    border-radius: 8px;
+    transition-duration: 0.3s;
+  }
+
+  button:hover {
+    background-color: darkslategray; /* Green */
+    color: white;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  .label {
+    margin-bottom: 10px;
+    font-size: .9em;
+    font-weight: 500;
+  }
+
+  .bold-label {
+    margin-bottom: 10px;
+    font-size: .9em;
+    font-weight: 500;
+  }
+
+  .num-text {
+    padding: 0 0;
+    font-weight: 500;
+    font-size: 18px;
+    caret-color: transparent;
+  }
+  
+  #unitCount {
+    font-size: 1.5em;
+    color: steelblue;
+    font-weight: 500;
+  }
+
+  .up-arrow {
+    content:'▲';
+    font-size:1.5em;
+    color:gray;
+    display:inline-block;
+    text-decoration:none;
+    cursor: pointer;
+    padding: 0 2px;
+  }
+  .up-arrow:hover{
+      color:darkslategray;
+  }
+
+  .down-arrow {
+    content:'▼';
+    font-size:1.5em;
+    color:gray;
+    display:inline-block;
+    text-decoration:none;
+    cursor: pointer;
+    padding: 0 2px;
+  }
+  .down-arrow:hover{
+      color:darkslategray;
+  }
+  
+  .reset {
+    display:inline-block;
+  }

@@ -4,6 +4,9 @@ Learning about converting numbers from decimal to binary in vanilla js.
 
 Most recent version will be live at [https://www.panix.com/~dreamer/binary-playground](https://www.panix.com/~dreamer/binary-playground)
 
+7/4/20
+* Fix bug and add reset button for binary number.
+
 7/3/20 
 * Add up and down keyboard arrows to inc/dec by 1
 * Change decimal field to an input that allows typing a number and hitting enter
