@@ -30,12 +30,17 @@ function b32twos(n) {
 }
 
 function upClick() {
-  number += unit;
+  number += +unit;
   updateCalcs();
 }
 
 function downClick() {
-  number -= unit;
+  number -= +unit;
+  updateCalcs();
+}
+
+function resetClick() {
+  number = 0;
   updateCalcs();
 }
 

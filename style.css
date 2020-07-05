@@ -114,6 +114,7 @@ body {
     padding: 0 0;
     font-weight: 500;
     font-size: 18px;
+    caret-color: transparent;
   }
   
   #unitCount {
@@ -129,7 +130,7 @@ body {
     display:inline-block;
     text-decoration:none;
     cursor: pointer;
-    padding: 0 10px;
+    padding: 0 2px;
   }
   .up-arrow:hover{
       color:darkslategray;
@@ -142,9 +143,12 @@ body {
     display:inline-block;
     text-decoration:none;
     cursor: pointer;
-    padding: 0 10px;
+    padding: 0 2px;
   }
   .down-arrow:hover{
       color:darkslategray;
   }
   
+  .reset {
+    display:inline-block;
+  }
