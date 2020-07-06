@@ -7,6 +7,7 @@ Most recent version will be live at [https://www.panix.com/~dreamer/binary-playg
 7/5/20
 
 - Consolidate, and add icons for unit of change buttons. Add number to buttons.
+- Calculator page: add input handlers, show decimal and binary numbers, implement decimal arithmetic.
 
 7/4/20
 
