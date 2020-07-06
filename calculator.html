@@ -12,22 +12,32 @@
       <div class="left-block">
         <h4>Binary Calculator</h4>
         <label for="value1">Value 1</label>
-        <input type="text" name="value1" id="value1" value="" />
+        <input type="text" name="value1" class="inputs" id="value1" value="" />
         <br />
         <br />
         <label for="value2">Value 2</label>
-        <input type="text" name="value2" id="value2" value="" />
+        <input type="text" name="value2" class="inputs" id="value2" value="" />
         <br />
         <hr />
-        <button>+</button>
+        <button onClick="calculateSum()">+</button>
       </div>
-      <div class="right-block"></div>
+      <div class="middle-block">
+        <span class="decimal-number" id="decimal1">0</span>
+        <br />
+        <span class="decimal-number" id="decimal2">0</span>
+        <hr />
+        <span class="decimal-number" id="decimal-sum">-</span>
+      </div>
+      <div class="right-block">
+        <span class="display-number" id="binary-display1">0</span>
+        <br />
+        <span class="display-number" id="binary-display2">0</span>
+        <hr />
+        <span class="display-number" id="binary-sum">-</span>
+      </div>
     </div>
     <div class="footer">
-      [<a href="https://www.panix.com/~dreamer/">home</a>] | [<a
-        href="https://github.com/dannylee8/binary-playground"
-        >github</a
-      >] | [<a href="./index.html">binary playground</a>] |
+      [<a href="https://www.panix.com/~dreamer/">home</a>] | [<a href="https://github.com/dannylee8/binary-playground">github</a>] | [<a href="./index.html">binary playground</a>] |
       <span id="toggle-outline" onClick="toggleOutlines()">
         outlines?
       </span>
