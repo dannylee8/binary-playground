@@ -15,16 +15,10 @@
           <span class="bold-label">Current Integer</span>
         </p>
         <div>
-          <input
-            type="text"
-            class="num-text"
-            value="0"
-            id="dec"
-            onkeydown="updateNumber(this)"
-          />
+          <input type="text" class="num-text" value="0" id="dec" onkeydown="updateNumber(this)" />
         </div>
-        <div class="up-arrow" onClick="upClick()">▲</div>
-        <div class="down-arrow" onClick="downClick()">▼</div>
+        <button class="up-arrow" onClick="upClick()">▲</button>
+        <button class="down-arrow" onClick="downClick()">▼</button>
         <div class="reset"><button onClick="resetClick()">reset</button></div>
         <div>
           <p>
@@ -34,17 +28,17 @@
             <span id="unitCount">1</span>
           </p>
         </div>
+        <button class="up-arrow" onClick="unitClick('+')"><span id="unit-up">1</span> ▲</button>
+        <button class="down-arrow" onClick="unitClick('-')"><span id="unit-down">1</span> ▼</button>
+        <br />
+        <button onClick="unitClick('1')">1</button>
+        <button onClick="unitClick('10')">10</button>
+        <button onClick="unitClick('100')">100</button>
         <button onClick="unitClick('reset')">reset</button>
-        <button onClick="unitClick('+')">+</button>
-        <button onClick="unitClick('-')">-</button>
         <br />
-        <button onClick="unitClick('+1')">+1</button>
-        <button onClick="unitClick('+10')">+10</button>
-        <button onClick="unitClick('+100')">+100</button>
-        <br />
-        <button onClick="unitClick('-1')">-1</button>
-        <button onClick="unitClick('-10')">-10</button>
-        <button onClick="unitClick('-100')">-100</button>
+        <!-- <button onClick="unitClick('-1')">-1</button> -->
+        <!-- <button onClick="unitClick('-10')">-10</button>
+        <button onClick="unitClick('-100')">-100</button> -->
       </div>
       <div class="right-block">
         Click a number to copy it to clipboard.
@@ -70,10 +64,7 @@
       </div>
     </div>
     <div class="footer">
-      [<a href="https://www.panix.com/~dreamer/">home</a>] | [<a
-        href="https://github.com/dannylee8/binary-playground"
-        >github</a
-      >] | [<a href="./calculator.html">calculator</a>] |
+      [<a href="https://www.panix.com/~dreamer/">home</a>] | [<a href="https://github.com/dannylee8/binary-playground">github</a>] | [<a href="./calculator.html">calculator</a>] |
       <span id="toggle-outline" onClick="toggleOutlines()">
         outlines?
       </span>

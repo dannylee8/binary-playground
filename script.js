@@ -5,9 +5,12 @@ let onesEle = document.getElementById("ones");
 let twosEle = document.getElementById("twos");
 let unitCount = document.getElementById("unitCount");
 let allElements = document.getElementsByTagName("*");
+let unitUp = document.getElementById("unit-up");
+let unitDown = document.getElementById("unit-down");
 
 let number = 0;
 let unit = 1;
+let unitChange = 1;
 let outline = false;
 
 /**
@@ -55,20 +58,23 @@ function updateCalcs() {
 function unitClick(arg) {
   if (arg === "reset") {
     unit = 1;
-  } else if (arg[0] === "+") {
-    if (arg.length === 1) {
-      unit += 1;
-    } else {
-      unit += Number.parseInt(arg.split("+")[1]);
-    }
-  } else if (arg[0] === "-") {
-    if (arg.length === 1) {
-      unit -= 1;
-    } else {
-      unit -= Number.parseInt(arg.split("-")[1]);
-    }
-  } else {
-    unit += arg;
+    unitChange = 1;
+  } else if (arg === "1") {
+    unitUp.innerHTML = `${unitChange}`;
+    unitDown.innerHTML = `${unitChange}`;
+    unitChange = 1;
+  } else if (arg === "10") {
+    unitChange = 10;
+    unitUp.innerHTML = `${unitChange}`;
+    unitDown.innerHTML = `${unitChange}`;
+  } else if (arg === "100") {
+    unitChange = 100;
+    unitUp.innerHTML = `${unitChange}`;
+    unitDown.innerHTML = `${unitChange}`;
+  } else if (arg === "+") {
+    unit += unitChange;
+  } else if (arg === "-") {
+    unit -= unitChange;
   }
   unitCount.innerHTML = `${unit}`;
 }
@@ -86,9 +92,7 @@ function clearCopyTextMessage() {
 
 function toggleOutlines() {
   for (let tag of allElements) {
-    outline
-      ? (tag.style.border = "none")
-      : (tag.style.border = "1px solid darkcyan");
+    outline ? (tag.style.border = "none") : (tag.style.border = "1px solid darkcyan");
   }
   outline ? (outline = false) : (outline = true);
 }
@@ -124,16 +128,7 @@ function updateNumber(ele) {
 
 // https://stackoverflow.com/questions/469357/html-text-input-allow-only-numeric-input
 function setInputFilter(textbox, inputFilter) {
-  [
-    "input",
-    "keydown",
-    "keyup",
-    "mousedown",
-    "mouseup",
-    "select",
-    "contextmenu",
-    "drop",
-  ].forEach(function (event) {
+  ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function (event) {
     textbox.addEventListener(event, function () {
       if (inputFilter(this.value)) {
         this.oldValue = this.value;
