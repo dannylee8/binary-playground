@@ -31,12 +31,57 @@ function handleV2(e) {
   bd2.innerHTML = binaryNumber2;
 }
 
+function clearInputs() {
+  v1.value = "";
+  v2.value = "";
+  d1.innerHTML = "0";
+  d2.innerHTML = "0";
+  bd1.innerHTML = "0";
+  bd2.innerHTML = "0";
+  bSum.innerHTML = "0";
+  dSum.innerHTML = "0";
+  decimalNumber1 = 0;
+  decimalNumber2 = 0;
+  binaryNumber1 = 0;
+  binaryNumber2 = 0;
+}
+
 function calculateDecimal(num) {
   return parseInt(num, 2);
 }
 
+function checkBinaryInputs() {
+  let b1 = binaryNumber1;
+  let b2 = binaryNumber2;
+
+  if (!b1 || !b2) {
+    clearInputs();
+    alert("Please provide two binary numbers.");
+  } else {
+    if (b1.length > b2.length) {
+      b2 = b2.toString().padStart(b1.length, "0");
+      bd2.innerHTML = b2;
+    } else {
+      b1 = b1.toString().padStart(b2.length, "0");
+      bd1.innerHTML = b1;
+    }
+    return true;
+  }
+}
+
+function sumBinary() {
+  let b1 = binaryNumber1;
+  let b2 = binaryNumber2;
+
+  if (checkBinaryInputs()) {
+    return 1;
+  }
+  // console.log(b1.split("").pop());
+}
+
 function calculateSum() {
   dSum.innerHTML = decimalNumber1 + decimalNumber2;
+  bSum.innerHTML = sumBinary();
 }
 
 // https://stackoverflow.com/questions/469357/html-text-input-allow-only-numeric-input
