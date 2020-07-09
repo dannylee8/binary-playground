@@ -22,18 +22,12 @@ body {
 }
 
 .left-block {
-  width: 34vw;
+  width: 25vw;
   padding: 16px 16px;
   margin-right: 16px;
   border: 3px darkgrey solid;
   border-radius: 10px;
   background-color: lightgoldenrodyellow;
-}
-
-.middle-block {
-  width: 20vw;
-  padding: 16px 16px;
-  text-align: right;
 }
 
 .right-block {
@@ -166,7 +160,6 @@ button:focus {
   font-size: 2em;
   padding: 2px;
   margin: 0 10px;
-  background-color: lightblue;
 }
 
 .decimal-number {
@@ -177,4 +170,13 @@ button:focus {
 
 .rb {
   height: 50px;
+}
+
+.results-table {
+  width: 30vw;
+  border-collapse: collapse;
+}
+
+#table-row-sum {
+  border-top: 1px solid black;
 }

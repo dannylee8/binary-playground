@@ -1,11 +1,14 @@
-v1 = document.getElementById("value1");
-v2 = document.getElementById("value2");
-d1 = document.getElementById("decimal1");
-d2 = document.getElementById("decimal2");
-dSum = document.getElementById("decimal-sum");
-bSum = document.getElementById("binary-sum");
-bd1 = document.getElementById("binary-display1");
-bd2 = document.getElementById("binary-display2");
+let allElements = document.getElementsByTagName("*");
+let outline = false;
+
+let v1 = document.getElementById("value1");
+let v2 = document.getElementById("value2");
+let d1 = document.getElementById("decimal-display1");
+let d2 = document.getElementById("decimal-display2");
+let dSum = document.getElementById("decimal-sum");
+let bSum = document.getElementById("binary-sum");
+let bd1 = document.getElementById("binary-display1");
+let bd2 = document.getElementById("binary-display2");
 
 v1.addEventListener("change", handleV1);
 v2.addEventListener("change", handleV2);
@@ -69,16 +72,6 @@ function checkBinaryInputs() {
   }
 }
 
-function xor(a, b) {
-  return a === b ? 0 : 1;
-}
-function and(a, b) {
-  return a == 1 && b == 1 ? 1 : 0;
-}
-function or(a, b) {
-  return a || b;
-}
-
 function halfAdder(a, b) {
   const sum = a ^ b;
   const carry = a & b;
@@ -123,6 +116,15 @@ function calculateBinary() {
 function calculateSum() {
   dSum.innerHTML = decimalNumber1 + decimalNumber2;
   bSum.innerHTML = calculateBinary() || 0;
+}
+
+function toggleOutlines() {
+  for (let tag of allElements) {
+    outline
+      ? (tag.style.border = "none")
+      : (tag.style.border = "1px solid darkcyan");
+  }
+  outline ? (outline = false) : (outline = true);
 }
 
 // https://stackoverflow.com/questions/469357/html-text-input-allow-only-numeric-input
