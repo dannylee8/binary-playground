@@ -69,19 +69,60 @@ function checkBinaryInputs() {
   }
 }
 
-function sumBinary() {
-  let b1 = binaryNumber1;
-  let b2 = binaryNumber2;
+function xor(a, b) {
+  return a === b ? 0 : 1;
+}
+function and(a, b) {
+  return a == 1 && b == 1 ? 1 : 0;
+}
+function or(a, b) {
+  return a || b;
+}
 
-  if (checkBinaryInputs()) {
-    return 1;
+function halfAdder(a, b) {
+  const sum = a ^ b;
+  const carry = a & b;
+  return [sum, carry];
+}
+
+function fullAdder(a, b, carry) {
+  halfAdd = halfAdder(a, b);
+  const sum = carry ^ halfAdd[0];
+  carry = carry & halfAdd[0];
+  carry = carry | halfAdd[1];
+  return [sum, carry];
+}
+
+function addBinary(a, b) {
+  let sum = "";
+  let carry = "";
+
+  for (let i = a.length - 1; i >= 0; i--) {
+    if (i == a.length - 1) {
+      const halfAdd = halfAdder(a[i], b[i]);
+      sum = halfAdd[0] + sum;
+      carry = halfAdd[1];
+    } else {
+      const fullAdd = fullAdder(a[i], b[i], carry);
+      sum = fullAdd[0] + sum;
+      carry = fullAdd[1];
+    }
   }
-  // console.log(b1.split("").pop());
+  return carry ? carry + sum : sum;
+}
+
+function calculateBinary() {
+  if (checkBinaryInputs()) {
+    let b1 = bd1.innerHTML;
+    let b2 = bd2.innerHTML;
+
+    return addBinary(b1, b2);
+  }
 }
 
 function calculateSum() {
   dSum.innerHTML = decimalNumber1 + decimalNumber2;
-  bSum.innerHTML = sumBinary();
+  bSum.innerHTML = calculateBinary() || 0;
 }
 
 // https://stackoverflow.com/questions/469357/html-text-input-allow-only-numeric-input
