@@ -4,6 +4,11 @@ Learning about converting numbers from decimal to binary in vanilla js.
 
 Most recent version will be live at [https://www.panix.com/~dreamer/binary-playground](https://www.panix.com/~dreamer/binary-playground)
 
+7/9/20
+- Pad binary numbers with 0s if length is different
+- Add half and full adders to calculate binary sum
+- Change display of numbers to a table
+
 7/5/20
 
 - Consolidate, and add icons for unit of change buttons. Add number to buttons.
